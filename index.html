@@ -1,0 +1,1139 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa 2027 — Quantum Branding · Ana Sepúlveda</title>
+<meta name="description" content="En 21 días, tu mapa para el 2027 ya está armado. Programa grupal de Quantum Branding, del 1 al 21 de diciembre. Solo para mujeres.">
+<meta property="og:title" content="Mapa 2027 — Quantum Branding">
+<meta property="og:description" content="En 21 días, tu mapa para el 2027 ya está armado. Inscripciones del 15 al 30 de noviembre.">
+<meta property="og:image" content="assets/mockup.jpg">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Bodoni+Moda:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: rgba(10,10,10,.68); font-family: 'Manrope', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #E8CBA0; }
+    a:hover { color: #FFFFFF; }
+    * { box-sizing: border-box; }
+
+    @keyframes mpTwinkle { 0%, 100% { opacity: .1 } 50% { opacity: .85 } }
+    @keyframes mpDraw { to { stroke-dashoffset: 0 } }
+    @keyframes mpFadeIn { to { opacity: var(--to, 1) } }
+    @keyframes mpDriftA { 0%, 100% { transform: translate3d(0,0,0) scale(1) } 50% { transform: translate3d(-26px, 14px, 0) scale(1.02) } }
+    @keyframes mpDriftB { 0%, 100% { transform: translate3d(0,0,0) } 50% { transform: translate3d(20px, -16px, 0) } }
+    @keyframes mpRise { from { opacity: 0; transform: translateY(22px) } to { opacity: 1; transform: none } }
+    @keyframes mpPop { from { opacity: 0; transform: scale(.35) } to { opacity: 1; transform: scale(1) } }
+    @keyframes mpHalo { 0% { opacity: .6; transform: scale(.5) } 70% { opacity: 0; transform: scale(2.3) } 100% { opacity: 0; transform: scale(2.3) } }
+    @keyframes mpSpin { to { transform: rotate(360deg) } }
+    @keyframes mpSpinBack { to { transform: rotate(-360deg) } }
+    @keyframes mpSheen { 0% { transform: translateX(-140%) } 55%, 100% { transform: translateX(280%) } }
+    @keyframes mpMarquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+    @keyframes mpGlowText { 0%, 100% { background-position: 0% 50% } 50% { background-position: 100% 50% } }
+    @keyframes mpPan { 0%, 100% { transform: scale(1.04) translate3d(0,0,0) } 50% { transform: scale(1.09) translate3d(-1.2%, 0.8%, 0) } }
+    @keyframes mpBreathe { 0%, 100% { opacity: .5 } 50% { opacity: .95 } }
+
+    .mp-stars circle { animation: mpTwinkle 5s ease-in-out infinite }
+    .mp-land { opacity: 0; --to: .62; animation: mpFadeIn 2.2s .2s ease-out forwards }
+    .mp-graticule { opacity: 0; --to: .14; animation: mpFadeIn 2.4s .1s ease-out forwards }
+    .mp-rhumb { opacity: 0; --to: .13; animation: mpFadeIn 3s .8s ease-out forwards }
+    .mp-driftA { animation: mpDriftA 34s ease-in-out infinite; transform-origin: 50% 50% }
+    .mp-driftB { animation: mpDriftB 44s ease-in-out infinite; transform-origin: 50% 50% }
+    .mp-rose { animation: mpSpin 120s linear infinite }
+    .mp-rose-in { animation: mpSpinBack 80s linear infinite }
+    .mp-breathe { animation: mpBreathe 7s ease-in-out infinite }
+
+    .mp-route { stroke-dasharray: 3200; stroke-dashoffset: 3200; animation: mpDraw 3.6s .6s cubic-bezier(.22,.7,.2,1) forwards }
+    .mp-node { opacity: 0; animation: mpPop .6s cubic-bezier(.3,1.5,.5,1) forwards; transform-origin: center }
+    .mp-halo { opacity: 0; animation: mpHalo 3.6s ease-out infinite; transform-origin: center }
+    .nd1 { animation-delay: 1.2s } .nd2 { animation-delay: 1.95s } .nd3 { animation-delay: 2.7s } .nd4 { animation-delay: 3.45s }
+    .hl1 { animation-delay: 1.6s } .hl2 { animation-delay: 2.35s } .hl3 { animation-delay: 3.1s } .hl4 { animation-delay: 3.85s }
+
+    .rise { animation: mpRise 1s cubic-bezier(.2,.7,.2,1) both }
+    .d1 { animation-delay: .1s } .d2 { animation-delay: .3s } .d3 { animation-delay: .5s }
+    .d4 { animation-delay: .7s } .d5 { animation-delay: .9s } .d6 { animation-delay: 1.1s }
+
+    .mp-gold { background: linear-gradient(100deg, #A8865A 0%, #E8CBA0 30%, #FFF2DC 50%, #E8CBA0 70%, #A8865A 100%); background-size: 220% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: mpGlowText 9s ease-in-out infinite }
+
+    .mp-card { position: relative; transition: transform .45s cubic-bezier(.2,.7,.2,1), border-color .45s, box-shadow .45s }
+    .mp-card::before { content: ''; position: absolute; inset: -1px; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .45s;
+      background: radial-gradient(120% 90% at 50% 0%, rgba(232,203,160,.20) 0%, rgba(232,203,160,0) 62%) }
+    .mp-card:hover { transform: translateY(-6px); border-color: rgba(232,203,160,.55);
+      box-shadow: 0 0 0 1px rgba(232,203,160,.25), 0 24px 70px rgba(232,203,160,.16), 0 10px 30px rgba(0,0,0,.5) }
+    .mp-card:hover::before { opacity: 1 }
+
+    .mp-cta { position: relative; overflow: hidden; transition: transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s }
+    .mp-cta:hover { transform: translateY(-3px); box-shadow: 0 20px 56px rgba(232,203,160,.4) }
+    .mp-cta > span.sheen { position: absolute; inset: 0 auto 0 0; width: 38%; background: linear-gradient(100deg, transparent, rgba(255,255,255,.5), transparent); animation: mpSheen 4.2s ease-in-out infinite; pointer-events: none }
+
+    .mp-quad { fill: #E8CBA0; opacity: 0; transition: opacity .5s }
+    .mp-branch { cursor: default }
+    .mp-branch:hover .mp-quad { opacity: .10 }
+    .mp-branch:hover .mp-ico { stroke: #FFF2DC }
+    .mp-branch:hover .mp-icofill { fill: #FFF2DC }
+    .mp-branch:hover .mp-blabel { fill: #FFF2DC }
+    .mp-ico, .mp-icofill, .mp-blabel { transition: stroke .5s, fill .5s }
+    .mp-ticks { animation: mpSpin 220s linear infinite; transform-box: view-box; transform-origin: 200px 200px }
+    .mp-ticks-r { animation: mpSpinBack 300s linear infinite; transform-box: view-box; transform-origin: 200px 200px }
+
+    @keyframes mpGrow { from { transform: scaleX(0) } to { transform: scaleX(1) } }
+    @keyframes mpAppear { from { opacity: 0; transform: translateY(-100%) } to { opacity: 1; transform: none } }
+
+    .mp-grain { position: fixed; inset: 0; pointer-events: none; z-index: 60; opacity: .035; mix-blend-mode: overlay }
+
+    .mp-bar { display: none }
+    .mp-progress { display: none }
+    @supports (animation-timeline: scroll()) {
+      .mp-progress { display: block; position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 70;
+        background: linear-gradient(90deg, #A8865A, #E8CBA0 55%, #FFF2DC); transform-origin: 0 50%;
+        animation: mpGrow linear both; animation-timeline: scroll() }
+      .mp-bar { display: flex; position: fixed; top: 0; left: 0; right: 0; z-index: 65;
+        align-items: center; justify-content: space-between; gap: 20px; padding: 12px 28px;
+        background: rgba(10,10,10,.72); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(232,203,160,.14);
+        animation: mpAppear .5s linear both; animation-timeline: scroll(); animation-range: 420px 560px }
+    }
+
+    .mp-stack { display: grid; grid-template-columns: repeat(auto-fit, minmax(258px, 1fr)); gap: 16px }
+    .mp-stack > * { position: relative }
+    .mp-stack > *:hover { z-index: 9 }
+    @media (min-width: 880px) {
+      .mp-stack { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 }
+      .mp-stack > * { box-shadow: 0 20px 56px rgba(0,0,0,.5) }
+      .mp-stack > *:nth-child(1) { z-index: 4; margin-right: -32px }
+      .mp-stack > *:nth-child(2) { z-index: 3; margin-left: -32px; margin-top: 54px }
+      .mp-stack > *:nth-child(3) { z-index: 2; margin-right: -32px; margin-top: -54px }
+      .mp-stack > *:nth-child(4) { z-index: 1; margin-left: -32px }
+    }
+
+    .mp-proof img { transition: transform .5s cubic-bezier(.2,.7,.2,1), opacity .4s; opacity: .88 }
+    .mp-proof:hover img { transform: scale(1.04); opacity: 1 }
+
+    .mp-yt { transition: border-color .4s, background .4s, transform .35s cubic-bezier(.2,.7,.2,1) }
+    .mp-yt:hover { border-color: rgba(232,203,160,.7); background: rgba(232,203,160,.1); color: #FFFBF4; transform: translateY(-2px) }
+
+    .mp-play img { transition: transform .6s cubic-bezier(.2,.7,.2,1), opacity .4s; opacity: .9 }
+    .mp-play:hover img { transform: scale(1.05); opacity: 1 }
+    .mp-playbtn { transition: transform .35s cubic-bezier(.3,1.3,.5,1), background .35s }
+    .mp-play:hover .mp-playbtn { transform: scale(1.12); background: #FFF2DC }
+
+    .mp-video { transition: border-color .4s, background .4s, transform .35s cubic-bezier(.2,.7,.2,1) }
+    .mp-video:hover { border-color: rgba(232,203,160,.66); background: rgba(232,203,160,.12); transform: translateY(-2px) }
+
+    @keyframes mpGateOut { to { opacity: 0; transform: scale(1.06) } }
+    @keyframes mpSealGlow { 0%, 100% { opacity: .22; transform: scale(.94) } 50% { opacity: .5; transform: scale(1.06) } }
+
+    .mp-gate { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column;
+      align-items: center; justify-content: space-between; text-align: center; padding: 7vh 24px 9vh;
+      background-image: url(assets/sobre.jpg); background-size: cover; background-position: center;
+      animation: mpRise .8s ease-out both }
+    .mp-gate-out { animation: mpGateOut .62s cubic-bezier(.4,0,.6,1) forwards; pointer-events: none }
+    .mp-seal-glow { position: absolute; left: 50%; top: 45%; width: 42vmin; height: 42vmin; margin: -21vmin 0 0 -21vmin;
+      border-radius: 50%; pointer-events: none; background: radial-gradient(circle, rgba(232,203,160,.5) 0%, rgba(232,203,160,0) 65%);
+      filter: blur(26px); animation: mpSealGlow 4.5s ease-in-out infinite }
+    .mp-open { transition: transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s, background .3s }
+    .mp-open:hover { transform: translateY(-3px); box-shadow: 0 20px 52px rgba(0,0,0,.6) }
+
+    .mp-rule { display: inline-flex; align-items: center; gap: 14px }
+    .mp-rule::before { content: ''; width: 34px; height: 1px; background: linear-gradient(90deg, rgba(232,203,160,0), #E8CBA0) }
+
+    .mp-arrow { display: inline-block; transition: transform .35s cubic-bezier(.2,.7,.2,1); margin-left: 10px; vertical-align: -1px }
+    .mp-cta:hover .mp-arrow { transform: translateX(6px) }
+
+    .mp-marquee { display: flex; width: max-content; animation: mpMarquee 46s linear infinite }
+
+    .mp-fold { border: 1px solid rgba(232,203,160,.17); border-radius: 14px; background: #1C1917; overflow: hidden; transition: border-color .4s, box-shadow .4s }
+    .mp-fold[open] { border-color: rgba(232,203,160,.4); box-shadow: 0 0 0 1px rgba(232,203,160,.16), 0 18px 54px rgba(0,0,0,.45) }
+    .mp-fold:hover { border-color: rgba(232,203,160,.4) }
+    .mp-fold > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 26px 30px; transition: background .35s }
+    .mp-fold > summary::-webkit-details-marker { display: none }
+    .mp-fold > summary:hover { background: rgba(232,203,160,.06) }
+    .mp-fold > summary svg { flex: 0 0 auto; transition: transform .4s cubic-bezier(.2,.7,.2,1);
+      box-sizing: content-box; padding: 7px; border: 1px solid rgba(232,203,160,.42); border-radius: 50%; background: rgba(232,203,160,.08) }
+    .mp-fold[open] > summary svg { transform: rotate(180deg) }
+    .mp-foldbody { padding: 0 30px 28px; animation: mpRise .5s cubic-bezier(.2,.7,.2,1) both }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important }
+      .mp-route { stroke-dashoffset: 0 }
+      .mp-node, .rise, .reveal, .mp-foldbody { opacity: 1 !important; transform: none !important }
+      .mp-land { opacity: .62 } .mp-graticule { opacity: .14 } .mp-rhumb { opacity: .13 }
+      .mp-halo { opacity: 0 }
+      .mp-progress { transform: scaleX(1) }
+      .mp-gold { color: #E8CBA0; background: none; -webkit-background-clip: border-box; background-clip: border-box }
+    }
+  </style>
+</head>
+<body>
+<div style="position: relative; background: rgba(10,10,10,.68); color: #F5F1E8; font-family: 'Manrope', system-ui, sans-serif; line-height: 1.55; overflow-x: hidden">
+
+  <div aria-hidden="true" style="position: fixed; inset: 0; z-index: 0; pointer-events: none; background-image: url(assets/terciopelo.jpg); background-size: cover; background-position: center; opacity: .72"></div>
+  <div aria-hidden="true" style="position: fixed; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(125% 95% at 50% 38%, rgba(10,8,9,.4) 0%, rgba(10,8,9,.6) 55%, rgba(6,5,5,.8) 100%)"></div>
+
+  <div style="position: relative; z-index: 1">
+
+  
+    <div class="mp-gate" id="gate">
+      <div class="mp-seal-glow" aria-hidden="true"></div>
+      <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,4,6,.82) 0%, rgba(14,4,6,.12) 34%, rgba(14,4,6,.2) 60%, rgba(14,4,6,.88) 100%)"></div>
+
+      <div style="position: relative">
+        <p style="margin: 0 0 18px; font-size: 11px; letter-spacing: .34em; text-transform: uppercase; color: #E8CBA0; font-weight: 600">
+          Quantum Branding &nbsp;·&nbsp; Solo para mujeres
+        </p>
+        <p style="margin: 0; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-weight: 500; font-size: clamp(42px, 9vw, 86px); line-height: .92; letter-spacing: -.02em; color: #FFFBF4">
+          Mapa<br><span class="mp-gold" style="font-weight: 600">2027</span>
+        </p>
+      </div>
+
+      <div style="position: relative">
+        <p style="margin: 0 0 26px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-style: italic; font-weight: 500; font-size: clamp(18px, 2.6vw, 23px); color: #F0DFC2">
+          Tu invitación está sellada.
+        </p>
+        <button class="mp-open" id="btn-abrir" type="button" style="display: inline-block; padding: 19px 46px; min-height: 44px; border: 0; border-radius: 6px; background: #E8CBA0; color: #19100F; font-family: 'Manrope', system-ui, sans-serif; font-size: 16px; font-weight: 700; letter-spacing: .02em; cursor: pointer">
+          Abrir mi invitación
+        </button>
+        <p style="margin: 18px 0 0; font-size: 13px; letter-spacing: .04em; color: #C4BCB2">
+          Inscripciones del 15 al 30 de noviembre
+        </p>
+      </div>
+    </div>
+
+  <div class="mp-progress" aria-hidden="true"></div>
+
+  <svg class="mp-grain" aria-hidden="true">
+    <filter id="mpGrainF"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3"/><feColorMatrix type="saturate" values="0"/></filter>
+    <rect width="100%" height="100%" filter="url(#mpGrainF)"/>
+  </svg>
+
+  <div class="mp-bar">
+    <span style="font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: 18px; color: #F5F1E8">Mapa 2027</span>
+    <span style="display: flex; align-items: center; gap: 22px">
+      <span style="font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: #C4BCB2">Inscripción hasta el 30 nov</span>
+      <div style="max-width: 760px; margin: 0 auto; border: 1px solid rgba(232,203,160,.34); border-radius: 16px; overflow: hidden; background: #16140F; box-shadow: 0 30px 80px rgba(0,0,0,.55)">
+        <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3owSmiSimTN8PcCvIJ2AdaOGOD0whBIeWe4sHZQkDwE3EROfwbkwa_Q1mWJ-ea9KDNsNgYnfeD?gv=true" title="Agenda tu llamada de 15 minutos con Ana Sepúlveda" style="border: 0; display: block; width: 100%; height: 660px" frameborder="0" loading="lazy"></iframe>
+      </div>
+    </span>
+  </div>
+
+  <!-- ══════════ HERO · LA CARTA ══════════ -->
+  <header style="position: relative; padding: 92px 24px 108px; min-height: 820px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: rgba(10,10,10,.68)">
+
+    <!-- la carta antigua, en transparencia -->
+    <div aria-hidden="true" style="position: absolute; inset: -4%; background-image: url(assets/mapa-antiguo.jpg); background-size: cover; background-position: center; opacity: .42; filter: saturate(.75) contrast(1.06); animation: mpPan 48s ease-in-out infinite"></div>
+    <div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(78% 62% at 50% 46%, rgba(10,10,10,.82) 0%, rgba(10,10,10,.56) 42%, rgba(10,10,10,.30) 72%, rgba(10,10,10,.62) 100%)"></div>
+    <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,.72) 0%, rgba(10,10,10,.18) 28%, rgba(10,10,10,.30) 62%, rgba(10,10,10,.68) 100%)"></div>
+
+    <!-- definiciones compartidas y la ruta trazada sobre la carta -->
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none">
+      <defs>
+        <linearGradient id="mpRouteGrad" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0%" stop-color="#A8865A"/><stop offset="45%" stop-color="#E8CBA0"/><stop offset="100%" stop-color="#FFF2DC"/>
+        </linearGradient>
+        <g id="mpRoseArt">
+          <circle r="92" fill="none" stroke="#E8CBA0" stroke-width="1"/>
+          <circle r="70" fill="none" stroke="#E8CBA0" stroke-width="0.6"/>
+          <circle r="22" fill="none" stroke="#E8CBA0" stroke-width="0.8"/>
+          <path d="M0 -92 L11 -14 L0 0 L-11 -14 Z" fill="#E8CBA0" opacity="0.75"/>
+          <path d="M0 92 L11 14 L0 0 L-11 14 Z" fill="#E8CBA0" opacity="0.4"/>
+          <path d="M-92 0 L-14 11 L0 0 L-14 -11 Z" fill="#E8CBA0" opacity="0.4"/>
+          <path d="M92 0 L14 11 L0 0 L14 -11 Z" fill="#E8CBA0" opacity="0.4"/>
+          <path d="M65 -65 L12 -5 L0 0 L5 -12 Z" fill="#E8CBA0" opacity="0.28"/>
+          <path d="M-65 65 L-12 5 L0 0 L-5 12 Z" fill="#E8CBA0" opacity="0.28"/>
+          <path d="M65 65 L12 5 L0 0 L5 12 Z" fill="#E8CBA0" opacity="0.28"/>
+          <path d="M-65 -65 L-12 -5 L0 0 L-5 -12 Z" fill="#E8CBA0" opacity="0.28"/>
+        </g>
+      </defs>
+
+      <path class="mp-route" d="M-60 764 C 190 706, 318 566, 520 540 C 702 516, 826 594, 1004 494 C 1156 408, 1286 300, 1510 238"
+            fill="none" stroke="url(#mpRouteGrad)" stroke-width="2.6" stroke-linecap="round" opacity="0.95"/>
+      <g>
+        <circle class="mp-halo hl1" cx="126" cy="700" r="7" fill="none" stroke="#E8CBA0" stroke-width="1.5"/>
+        <circle class="mp-node nd1" cx="126" cy="700" r="5" fill="#E8CBA0"/>
+        <circle class="mp-halo hl2" cx="520" cy="540" r="7" fill="none" stroke="#E8CBA0" stroke-width="1.5"/>
+        <circle class="mp-node nd2" cx="520" cy="540" r="5" fill="#E8CBA0"/>
+        <circle class="mp-halo hl3" cx="1004" cy="494" r="7" fill="none" stroke="#E8CBA0" stroke-width="1.5"/>
+        <circle class="mp-node nd3" cx="1004" cy="494" r="5" fill="#E8CBA0"/>
+        <circle class="mp-halo hl4" cx="1376" cy="268" r="10" fill="none" stroke="#FFF2DC" stroke-width="1.8"/>
+        <circle class="mp-node nd4" cx="1376" cy="268" r="7" fill="#FFF2DC"/>
+      </g>
+    </svg>
+
+    <div aria-hidden="true" style="position: absolute; inset: auto 0 0 0; height: 260px; background: linear-gradient(to bottom, rgba(11,10,9,0), #0A0A0A); pointer-events: none"></div>
+    <div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(70% 55% at 50% 48%, rgba(11,10,9,.72) 0%, rgba(11,10,9,.35) 45%, rgba(11,10,9,0) 78%); pointer-events: none"></div>
+
+    <div style="position: relative; max-width: 960px; margin: 0 auto; text-align: center">
+
+      <p class="rise d1" style="margin: 0 0 34px; font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: #F0DFC2; font-weight: 600">
+        Quantum Branding &nbsp;·&nbsp; Programa grupal &nbsp;·&nbsp; Solo para mujeres
+      </p>
+
+      <h1 class="rise d2" style="margin: 0; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-weight: 500; font-size: clamp(58px, 13.5vw, 178px); line-height: 0.86; letter-spacing: -0.015em; color: #FFFFFF">
+        Mapa
+        <span class="mp-gold" style="display: block; font-weight: 600">2027</span>
+      </h1>
+
+      <p class="rise d3" style="margin: 32px auto 20px; max-width: 720px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: clamp(22px, 3.6vw, 36px); line-height: 1.22; color: #FFFFFF; font-weight: 400">
+        En 21 días, tu mapa para el 2027 ya está armado.
+      </p>
+
+      <p class="rise d4" style="margin: 0 auto 40px; max-width: 620px; font-size: clamp(16px, 2vw, 19px); color: #DFD8CE">
+        Estrategia, posicionamiento, ángulos, pilares y calendario. Entras a enero sabiendo qué vender, a quién, y por qué tienen que elegirte a ti.
+      </p>
+
+      <div class="rise d5" style="margin: 0 auto 40px; max-width: 620px">
+        <div style="display: flex; flex-wrap: wrap; border: 1px solid rgba(232,203,160,.4); border-radius: 14px; background: rgba(10,10,10,.5); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); overflow: hidden">
+
+          <div style="flex: 1 1 240px; min-width: 0; padding: 24px 22px; text-align: center">
+            <p style="margin: 0 0 10px; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #C4BCB2; font-weight: 600">Inscripciones</p>
+            <p class="mp-gold" style="margin: 0; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-weight: 600; font-size: clamp(27px, 4.4vw, 36px); line-height: 1.05; white-space: nowrap">15 — 30 nov</p>
+          </div>
+
+          <div aria-hidden="true" style="width: 1px; align-self: stretch; background: linear-gradient(to bottom, rgba(232,203,160,0), rgba(232,203,160,.45), rgba(232,203,160,0))"></div>
+
+          <div style="flex: 1 1 240px; min-width: 0; padding: 24px 22px; text-align: center">
+            <p style="margin: 0 0 10px; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #C4BCB2; font-weight: 600">Empezamos</p>
+            <p class="mp-gold" style="margin: 0; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-weight: 600; font-size: clamp(27px, 4.4vw, 36px); line-height: 1.05; white-space: nowrap">1 — 21 dic</p>
+          </div>
+
+        </div>
+        <p style="margin: 16px 0 0; font-size: 13.5px; letter-spacing: .04em; color: #C4BCB2">
+          3 llamadas en vivo &nbsp;·&nbsp; Cupos limitados &nbsp;·&nbsp; El único grupal del año
+        </p>
+      </div>
+
+      <div class="rise d6">
+        <a class="mp-cta" href="https://calendar.app.google/jey97usAEXV5FyUv7" target="_blank" rel="noopener" style="display: inline-block; padding: 20px 46px; min-height: 44px; background: #E8CBA0; color: #2A1206; border-radius: 6px; font-size: 17px; font-weight: 700; text-decoration: none; letter-spacing: 0.01em">
+          <span class="sheen"></span>Agendar mi llamada de 15 minutos<span class="mp-arrow">&#8594;</span>
+        </a>
+        <p style="margin: 20px 0 0; font-size: 14px; color: #C4BCB2">
+          Sin compromiso. Si Mapa no es para ti, te lo digo en la llamada.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════ BANDA EN MOVIMIENTO ══════════ -->
+  <div aria-hidden="true" style="position: relative; padding: 18px 0; overflow: hidden; background: rgba(10,10,10,.68); border-top: 1px solid rgba(232,203,160,.14); border-bottom: 1px solid rgba(232,203,160,.14)">
+    <div class="mp-marquee">
+      <div style="display: flex; align-items: center; gap: 40px; padding-right: 40px; white-space: nowrap; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: 17px; color: rgba(232,203,160,.55)">
+        <span>Estrategia</span><span>·</span><span>Posicionamiento</span><span>·</span><span>Diferencial</span><span>·</span><span>Ángulos</span><span>·</span><span>Pilares</span><span>·</span><span>Calendario 2027</span><span>·</span><span>Diagnóstico de Identidad</span><span>·</span><span>Estilo visual</span><span>·</span><span>Plan de ejecución</span><span>·</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 40px; padding-right: 40px; white-space: nowrap; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: 17px; color: rgba(232,203,160,.55)">
+        <span>Estrategia</span><span>·</span><span>Posicionamiento</span><span>·</span><span>Diferencial</span><span>·</span><span>Ángulos</span><span>·</span><span>Pilares</span><span>·</span><span>Calendario 2027</span><span>·</span><span>Diagnóstico de Identidad</span><span>·</span><span>Estilo visual</span><span>·</span><span>Plan de ejecución</span><span>·</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ EL PROBLEMA ══════════ -->
+  <section style="position: relative; padding: 104px 24px; background: rgba(10,10,10,.68); overflow: hidden">
+    <div style="position: relative; max-width: 880px; margin: 0 auto">
+
+      <blockquote class="reveal" style="margin: 0 0 52px; padding: 0 0 0 30px; border-left: 2px solid #E8CBA0">
+        <p style="margin: 0; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: clamp(28px, 4.4vw, 46px); line-height: 1.18; color: #FFFFFF; font-weight: 600">
+          Sabes más que tu competencia,<br>pero te eligen menos.
+        </p>
+      </blockquote>
+
+      <p class="reveal" style="margin: 0 0 20px; font-size: 19px; color: #DFD8CE">
+        Si viste a alguien con menos experiencia llenarse de clientas y cobrar el doble, ya sabes que el problema no es tu capacidad. Tu trabajo es bueno. Eso no está en discusión.
+      </p>
+      <p class="reveal" style="margin: 0 0 56px; font-size: 19px; color: #DFD8CE">
+        Lo que te falta es <strong style="color: #FFFFFF">dirección</strong>: qué vendes, a quién, y por qué tienen que elegirte a ti.
+      </p>
+
+      <h2 class="reveal" style="margin: 0 0 24px; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: #F0DFC2; font-weight: 600">
+        Si alguna de estas frases es tuya, esto es para ti
+      </h2>
+
+      <div class="mp-stack">
+        <div class="mp-card reveal" style="display: flex; align-items: center; min-height: 168px; padding: 34px 34px 34px 32px; background: linear-gradient(160deg, #2A2320 0%, #1C1110 100%); border: 1px solid rgba(232,203,160,.28); border-left: 2px solid rgba(232,203,160,.55); border-radius: 12px">
+          <p style="margin: 0; font-weight: 500; font-size: clamp(18px, 2.1vw, 21px); line-height: 1.55; color: #F5F1E8">«Hago un trabajo buenísimo y nadie lo ve.»</p>
+        </div>
+        <div class="mp-card reveal" style="display: flex; align-items: center; min-height: 168px; padding: 34px 34px 34px 32px; background: linear-gradient(160deg, #2A2320 0%, #1C1110 100%); border: 1px solid rgba(232,203,160,.28); border-left: 2px solid rgba(232,203,160,.55); border-radius: 12px">
+          <p style="margin: 0; font-weight: 500; font-size: clamp(18px, 2.1vw, 21px); line-height: 1.55; color: #F5F1E8">«No sé qué me hace distinta, todas decimos lo mismo.»</p>
+        </div>
+        <div class="mp-card reveal" style="display: flex; align-items: center; min-height: 168px; padding: 34px 34px 34px 32px; background: linear-gradient(160deg, #2A2320 0%, #1C1110 100%); border: 1px solid rgba(232,203,160,.28); border-left: 2px solid rgba(232,203,160,.55); border-radius: 12px">
+          <p style="margin: 0; font-weight: 500; font-size: clamp(18px, 2.1vw, 21px); line-height: 1.55; color: #F5F1E8">«Empiezo mil cosas y no cierro ninguna.»</p>
+        </div>
+        <div class="mp-card reveal" style="display: flex; align-items: center; min-height: 168px; padding: 34px 34px 34px 32px; background: linear-gradient(160deg, #2A2320 0%, #1C1110 100%); border: 1px solid rgba(232,203,160,.28); border-left: 2px solid rgba(232,203,160,.55); border-radius: 12px">
+          <p style="margin: 0; font-weight: 500; font-size: clamp(18px, 2.1vw, 21px); line-height: 1.55; color: #F5F1E8">«No sé qué publicar ni cómo hablar de lo que hago.»</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ QUÉ ES ══════════ -->
+  <section style="padding: 96px 24px; background: linear-gradient(180deg, rgba(10,10,10,.68) 0%, rgba(58,16,24,.6) 42%, rgba(58,16,24,.6) 100%)">
+    <div style="max-width: 1040px; margin: 0 auto">
+
+      <h2 class="reveal" style="margin: 0 0 20px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: clamp(34px, 5vw, 58px); line-height: 1.02; letter-spacing: -.02em; color: #FFFFFF; font-weight: 600; max-width: 780px">
+        No es otro curso de fin de año. Es el mapa con el que entras a 2027.
+      </h2>
+      <p class="reveal" style="margin: 0 0 56px; max-width: 700px; font-size: 19px; color: #DFD8CE">
+        Veintiún días de trabajo acompañado para mujeres que viven de lo que saben. Sales con un plan concreto y con un sistema para sostenerlo todo el año, no con una lista de ideas.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(236px, 1fr)); gap: 20px">
+        <div class="mp-card reveal" style="padding: 36px 30px; background: linear-gradient(160deg, #221E1C 0%, #19100F 100%); border: 1px solid rgba(232,203,160,.22); border-radius: 14px">
+          <p class="mp-gold" style="margin: 0 0 10px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: 62px; line-height: 1; font-weight: 500">21</p>
+          <p style="margin: 0; font-size: 16px; color: #DFD8CE">días, del 1 al 21 de diciembre</p>
+        </div>
+        <div class="mp-card reveal" style="padding: 36px 30px; background: linear-gradient(160deg, #221E1C 0%, #19100F 100%); border: 1px solid rgba(232,203,160,.22); border-radius: 14px">
+          <p class="mp-gold" style="margin: 0 0 10px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: 62px; line-height: 1; font-weight: 500">3</p>
+          <p style="margin: 0; font-size: 16px; color: #DFD8CE">llamadas en vivo, una por semana</p>
+        </div>
+        <div class="mp-card reveal" style="padding: 36px 30px; background: linear-gradient(160deg, #221E1C 0%, #19100F 100%); border: 1px solid rgba(232,203,160,.22); border-radius: 14px">
+          <p class="mp-gold" style="margin: 0 0 10px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: 62px; line-height: 1; font-weight: 500">1</p>
+          <p style="margin: 0; font-size: 16px; color: #DFD8CE">grupal en todo el año. Este.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ EL RECORRIDO · PLEGABLE ══════════ -->
+  <section style="padding: 104px 24px; background: rgba(58,16,24,.6)">
+    <div style="max-width: 940px; margin: 0 auto">
+
+      <p class="reveal mp-rule" style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: #F0DFC2; font-weight: 600">El recorrido</p>
+      <h2 class="reveal" style="margin: 0 0 12px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: clamp(32px, 4.8vw, 54px); line-height: 1.04; letter-spacing: -.015em; color: #FFFFFF; font-weight: 600">
+        Tres etapas, una ruta
+      </h2>
+      <p class="reveal" style="margin: 0 0 40px; font-size: 16px; color: #C4BCB2">Toca cada etapa para ver qué se trabaja y con qué sales.</p>
+
+      <svg viewBox="0 0 900 120" aria-hidden="true" style="width: 100%; height: auto; display: block; margin-bottom: 40px; overflow: visible">
+        <path class="mp-route" d="M40 86 C 180 86, 200 40, 330 40 C 460 40, 480 86, 610 86 C 720 86, 760 36, 860 36"
+              fill="none" stroke="url(#mpRouteGrad)" stroke-width="2.2" stroke-linecap="round" opacity="0.85"/>
+        <circle class="mp-halo hl1" cx="40" cy="86" r="7" fill="none" stroke="#E8CBA0" stroke-width="1.4"/>
+        <circle class="mp-node nd1" cx="40" cy="86" r="6" fill="#E8CBA0"/>
+        <circle class="mp-halo hl2" cx="330" cy="40" r="7" fill="none" stroke="#E8CBA0" stroke-width="1.4"/>
+        <circle class="mp-node nd2" cx="330" cy="40" r="6" fill="#E8CBA0"/>
+        <circle class="mp-halo hl3" cx="610" cy="86" r="7" fill="none" stroke="#E8CBA0" stroke-width="1.4"/>
+        <circle class="mp-node nd3" cx="610" cy="86" r="6" fill="#E8CBA0"/>
+        <circle class="mp-halo hl4" cx="860" cy="36" r="10" fill="none" stroke="#FFF2DC" stroke-width="1.6"/>
+        <circle class="mp-node nd4" cx="860" cy="36" r="8" fill="#FFF2DC"/>
+        <text class="mp-node nd1" x="40" y="112" text-anchor="middle" fill="#9C958E" font-family="Manrope, sans-serif" font-size="13">Semana 1</text>
+        <text class="mp-node nd2" x="330" y="20" text-anchor="middle" fill="#9C958E" font-family="Manrope, sans-serif" font-size="13">Semana 2</text>
+        <text class="mp-node nd3" x="610" y="112" text-anchor="middle" fill="#9C958E" font-family="Manrope, sans-serif" font-size="13">Semana 3</text>
+        <text class="mp-node nd4" x="860" y="14" text-anchor="middle" fill="#E8CBA0" font-family="Manrope, sans-serif" font-size="13" font-weight="600">Día 21</text>
+      </svg>
+
+      <div style="display: flex; flex-direction: column; gap: 14px">
+
+        <details class="mp-fold reveal" open>
+          <summary>
+            <span style="display: flex; align-items: baseline; gap: 20px; min-width: 0">
+              <span class="mp-gold" style="font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: 34px; line-height: 1; font-weight: 500">01</span>
+              <span style="font-size: 22px; color: #FFFFFF; font-weight: 600">Estrategia y posicionamiento</span>
+            </span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8CBA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="mp-foldbody">
+            <p style="margin: 0 0 18px; font-size: 17px; color: #D5CDC3">Qué vendes, a quién le hablas y por qué tienen que elegirte a ti. Aquí se nombra tu diferencial: eso que te hace única y que hoy no sabes poner en palabras.</p>
+            <p style="margin: 0; font-size: 15px; color: #E8CBA0; font-weight: 500">Sales con: tu estrategia 2027 · tu posicionamiento en una frase · tu diferencial nombrado</p>
+          </div>
+        </details>
+
+        <details class="mp-fold reveal">
+          <summary>
+            <span style="display: flex; align-items: baseline; gap: 20px; min-width: 0">
+              <span class="mp-gold" style="font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: 34px; line-height: 1; font-weight: 500">02</span>
+              <span style="font-size: 22px; color: #FFFFFF; font-weight: 600">Contenido infinito, IA y estética</span>
+            </span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8CBA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="mp-foldbody">
+            <p style="margin: 0 0 18px; font-size: 17px; color: #D5CDC3">Un sistema de ideas que se alimenta solo, de tu diferencial y de las preguntas reales de tus clientas. Más la imagen que ese posicionamiento necesita, y cómo apalancarte de la inteligencia artificial sin perder tu cara ni tu voz.</p>
+            <p style="margin: 0; font-size: 15px; color: #E8CBA0; font-weight: 500">Sales con: tus ángulos · tus pilares · tu calendario 2027 · tu estilo visual · tus primeras fotos profesionales con IA</p>
+          </div>
+        </details>
+
+        <details class="mp-fold reveal">
+          <summary>
+            <span style="display: flex; align-items: baseline; gap: 20px; min-width: 0">
+              <span class="mp-gold" style="font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: 34px; line-height: 1; font-weight: 500">03</span>
+              <span style="font-size: 22px; color: #FFFFFF; font-weight: 600">Mostrarte y ejecutar</span>
+            </span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8CBA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="mp-foldbody">
+            <p style="margin: 0 0 18px; font-size: 17px; color: #D5CDC3">Cómo te muestras en cámara, cómo sostienes la publicación, y con qué rutina trabajas el resto del año. Revisamos en vivo lo que produjiste durante el programa.</p>
+            <p style="margin: 0; font-size: 15px; color: #E8CBA0; font-weight: 500">Sales con: tu plan de ejecución 2027 · tu rutina de publicación · tus plantillas armadas</p>
+          </div>
+        </details>
+
+        <details class="mp-fold reveal" style="background: linear-gradient(135deg, #4A1220 0%, #1C1917 100%); border-color: rgba(232,203,160,.32)">
+          <summary>
+            <span style="display: flex; align-items: baseline; gap: 20px; min-width: 0">
+              <span style="font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: 34px; line-height: 1; font-weight: 400; color: #FFF2DC">21</span>
+              <span style="font-size: 22px; color: #FFFFFF; font-weight: 600">El destino</span>
+            </span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFF2DC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="mp-foldbody">
+            <p style="margin: 0; font-size: 17px; color: #D8D0C7">Presentas tu mapa completo y te llevas tu siguiente paso definido. Entras a enero con el año armado y sin improvisar.</p>
+          </div>
+        </details>
+
+      </div>
+
+      <div class="mp-card reveal" style="margin-top: 26px; padding: 32px 38px; background: rgba(232,203,160,0.07); border-radius: 14px; border: 1px solid rgba(232,203,160,0.16)">
+        <h3 style="margin: 0 0 10px; font-size: 19px; color: #F0DFC2; font-weight: 600">Y entre llamada y llamada, no te suelto</h3>
+        <p style="margin: 0; font-size: 17px; color: #D5CDC3">Chat de empuje los 21 días, con tareas cortas que mantienen el avance. Revisión de tu perfil y tu bio dentro del proceso. Guiones y ganchos trabajados desde tu síntoma, no desde una plantilla genérica.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ DIAGNÓSTICO · LA RUEDA ══════════ -->
+  <section style="position: relative; padding: 112px 24px; background: rgba(10,10,10,.68); overflow: hidden">
+    <div style="position: relative; max-width: 1080px; margin: 0 auto">
+
+      <p class="reveal mp-rule" style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: #F0DFC2; font-weight: 600">Incluido en Mapa 2027 · Tu Diagnóstico de Identidad</p>
+      <h2 class="reveal" style="margin: 0 0 24px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: clamp(32px, 5vw, 56px); line-height: 1.02; letter-spacing: -.02em; color: #FFFFFF; font-weight: 600; max-width: 820px">
+        Tu identidad es la base.<br>Todo lo demás se construye encima.
+      </h2>
+      <p class="reveal" style="margin: 0 0 52px; max-width: 720px; font-size: 19px; color: #DFD8CE">
+        Antes de hablar de contenido, de estética o de calendario hay una pregunta que resolver: quién eres y desde dónde hablas. Si eso no está claro, lo que venga después es decoración. Por eso el Diagnóstico va primero, y no al final.
+      </p>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+
+        <!-- la rueda -->
+        <div style="flex: 1 1 380px; min-width: 0; max-width: 480px; margin: 0 auto">
+          <svg viewBox="0 0 400 400" role="img" aria-label="Los cuatro sistemas del Diagnóstico de Identidad: carta natal, numerología, BaZi y astrología china" style="width: 100%; height: auto; display: block">
+
+            <circle cx="200" cy="200" r="194" fill="none" stroke="#E8CBA0" stroke-width="0.8" opacity="0.22"/>
+            <circle cx="200" cy="200" r="150" fill="none" stroke="#E8CBA0" stroke-width="1" opacity="0.4"/>
+            <circle cx="200" cy="200" r="62" fill="#0A0A0A" stroke="#E8CBA0" stroke-width="1" opacity="0.95"/>
+
+            <g class="mp-ticks" stroke="#E8CBA0" stroke-width="0.9" opacity="0.3">
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(0 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(5 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(10 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(15 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(20 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(25 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(30 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(35 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(40 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(45 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(50 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(55 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(60 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(65 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(70 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(75 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(80 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(85 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(90 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(95 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(100 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(105 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(110 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(115 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(120 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(125 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(130 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(135 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(140 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(145 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(150 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(155 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(160 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(165 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(170 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(175 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(180 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(185 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(190 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(195 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(200 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(205 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(210 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(215 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(220 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(225 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(230 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(235 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(240 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(245 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(250 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(255 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(260 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(265 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(270 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(275 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(280 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(285 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(290 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(295 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(300 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(305 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(310 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(315 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(320 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(325 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(330 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(335 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(340 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="26" transform="rotate(345 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(350 200 200)"/>
+          <line x1="200" y1="14" x2="200" y2="21" transform="rotate(355 200 200)"/>
+            </g>
+            <g class="mp-ticks-r" fill="none" stroke="#E8CBA0" stroke-width="0.6" opacity="0.16">
+              <circle cx="200" cy="200" r="168"/>
+              <circle cx="200" cy="200" r="178"/>
+            </g>
+
+            <g stroke="#E8CBA0" stroke-width="1" opacity="0.28">
+              <line x1="50" y1="200" x2="350" y2="200"/>
+              <line x1="200" y1="50" x2="200" y2="350"/>
+            </g>
+
+            <!-- Carta natal -->
+            <g class="mp-branch">
+              <path class="mp-quad" d="M200 200 L200 50 A150 150 0 0 0 50 200 Z"/>
+              <g transform="translate(126 118)">
+                <circle class="mp-ico" r="11" fill="none" stroke="#E8CBA0" stroke-width="1.5"/>
+                <circle class="mp-icofill" r="3" fill="#E8CBA0"/>
+                <g class="mp-ico" stroke="#E8CBA0" stroke-width="1.5" stroke-linecap="round">
+                  <line x1="0" y1="-18" x2="0" y2="-23"/><line x1="0" y1="18" x2="0" y2="23"/>
+                  <line x1="-18" y1="0" x2="-23" y2="0"/><line x1="18" y1="0" x2="23" y2="0"/>
+                  <line x1="-13" y1="-13" x2="-16.5" y2="-16.5"/><line x1="13" y1="13" x2="16.5" y2="16.5"/>
+                  <line x1="13" y1="-13" x2="16.5" y2="-16.5"/><line x1="-13" y1="13" x2="-16.5" y2="16.5"/>
+                </g>
+              </g>
+              <text class="mp-blabel" x="126" y="162" text-anchor="middle" fill="#E8CBA0" font-family="Manrope, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.6">CARTA NATAL</text>
+            </g>
+
+            <!-- Numerología -->
+            <g class="mp-branch">
+              <path class="mp-quad" d="M200 200 L350 200 A150 150 0 0 0 200 50 Z"/>
+              <g class="mp-icofill" transform="translate(274 118)" fill="#E8CBA0">
+                <rect x="-19" y="-19" width="11" height="11" rx="1.5" opacity="0.45"/>
+                <rect x="-5.5" y="-19" width="11" height="11" rx="1.5"/>
+                <rect x="8" y="-19" width="11" height="11" rx="1.5" opacity="0.45"/>
+                <rect x="-19" y="-5.5" width="11" height="11" rx="1.5"/>
+                <rect x="-5.5" y="-5.5" width="11" height="11" rx="1.5" opacity="0.45"/>
+                <rect x="8" y="-5.5" width="11" height="11" rx="1.5"/>
+                <rect x="-19" y="8" width="11" height="11" rx="1.5" opacity="0.45"/>
+                <rect x="-5.5" y="8" width="11" height="11" rx="1.5"/>
+                <rect x="8" y="8" width="11" height="11" rx="1.5" opacity="0.45"/>
+              </g>
+              <text class="mp-blabel" x="274" y="162" text-anchor="middle" fill="#E8CBA0" font-family="Manrope, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.6">NUMEROLOGÍA</text>
+            </g>
+
+            <!-- BaZi -->
+            <g class="mp-branch">
+              <path class="mp-quad" d="M200 200 L200 350 A150 150 0 0 0 350 200 Z"/>
+              <g class="mp-ico" transform="translate(274 272)" stroke="#E8CBA0" stroke-width="3" stroke-linecap="round">
+                <line x1="-16.5" y1="-14" x2="-16.5" y2="14"/>
+                <line x1="-5.5" y1="-19" x2="-5.5" y2="14"/>
+                <line x1="5.5" y1="-19" x2="5.5" y2="14"/>
+                <line x1="16.5" y1="-14" x2="16.5" y2="14"/>
+              </g>
+              <text class="mp-blabel" x="274" y="248" text-anchor="middle" fill="#E8CBA0" font-family="Manrope, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.6">BAZI</text>
+            </g>
+
+            <!-- Astrología china -->
+            <g class="mp-branch">
+              <path class="mp-quad" d="M200 200 L50 200 A150 150 0 0 0 200 350 Z"/>
+              <g transform="translate(126 272)">
+                <circle class="mp-ico" r="13" fill="none" stroke="#E8CBA0" stroke-width="1.4"/>
+                <g class="mp-ico" stroke="#E8CBA0" stroke-width="1.6" stroke-linecap="round">
+                  <line x1="0" y1="-19" x2="0" y2="-14" transform="rotate(0 0 0)"/>
+                  <line x1="0" y1="-19" x2="0" y2="-14" transform="rotate(30 0 0)"/>
+                  <line x1="0" y1="-19" x2="0" y2="-14" transform="rotate(60 0 0)"/>
+                  <line x1="0" y1="-19" x2="0" y2="-14" transform="rotate(90 0 0)"/>
+                  <line x1="0" y1="-19" x2="0" y2="-14" transform="rotate(120 0 0)"/>
+                  <line x1="0" y1="-19" x2="0" y2="-14" transform="rotate(150 0 0)"/>
+                  <line x1="0" y1="-19" x2="0" y2="-14" transform="rotate(180 0 0)"/>
+                  <line x1="0" y1="-19" x2="0" y2="-14" transform="rotate(210 0 0)"/>
+                  <line x1="0" y1="-19" x2="0" y2="-14" transform="rotate(240 0 0)"/>
+                  <line x1="0" y1="-19" x2="0" y2="-14" transform="rotate(270 0 0)"/>
+                  <line x1="0" y1="-19" x2="0" y2="-14" transform="rotate(300 0 0)"/>
+                  <line x1="0" y1="-19" x2="0" y2="-14" transform="rotate(330 0 0)"/>
+                </g>
+              </g>
+              <text class="mp-blabel" x="126" y="248" text-anchor="middle" fill="#E8CBA0" font-family="Manrope, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.6">ASTROLOGÍA CHINA</text>
+            </g>
+
+            <!-- centro -->
+            <g class="mp-breathe">
+              <circle cx="200" cy="200" r="52" fill="none" stroke="#E8CBA0" stroke-width="0.7" opacity="0.5"/>
+            </g>
+            <text x="200" y="192" text-anchor="middle" fill="#FFF2DC" font-family="Manrope, sans-serif" font-size="9.5" font-weight="700" letter-spacing="2.4">QUANTUM</text>
+            <text x="200" y="206" text-anchor="middle" fill="#FFF2DC" font-family="Manrope, sans-serif" font-size="9.5" font-weight="700" letter-spacing="2.4">IDENTITY</text>
+            <text x="200" y="220" text-anchor="middle" fill="#FFF2DC" font-family="Manrope, sans-serif" font-size="9.5" font-weight="700" letter-spacing="2.4">MATRIX</text>
+          </svg>
+        </div>
+
+        <!-- el texto -->
+        <div style="flex: 999 1 420px; min-width: 0">
+          <p class="reveal mp-rule" style="margin: 0 0 20px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #F0DFC2; font-weight: 600">De dónde sale</p>
+          <p class="reveal" style="margin: 0 0 20px; font-size: 19px; color: #DFD8CE">
+            Me das tu fecha, hora y ciudad de nacimiento, y cruzo cuatro sistemas a mano —carta natal, numerología, BaZi y astrología china— hasta que coinciden en la misma respuesta.
+          </p>
+          <p class="reveal" style="margin: 0 0 20px; font-size: 19px; color: #DFD8CE">
+            No es un test que te devuelve una etiqueta. Es el mapa de <strong style="color: #FFFFFF">por qué, cómo y cuándo</strong>: tus superpoderes reales, lo que te frena, y en qué ventanas del año conviene que hagas cada cosa.
+          </p>
+          <p class="reveal" style="margin: 0; font-size: 19px; color: #DFD8CE">
+            Cuatro lecturas distintas que llegan al mismo punto. Ese punto es tu identidad, y es sobre lo que trabajamos los 21 días.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- lo que se construye encima -->
+      <div style="margin-top: 72px">
+        <p class="reveal mp-rule" style="margin: 0 0 8px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #F0DFC2; font-weight: 600">Sobre esa base construimos</p>
+        <p class="reveal" style="margin: 0 0 32px; max-width: 700px; font-size: 19px; color: #DFD8CE">
+          Con tu Diagnóstico en la mano, lo que antes eran decisiones sueltas pasa a tener un criterio. Cuatro cosas que vas a usar todos los días:
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(226px, 1fr)); gap: 16px">
+
+          <div class="mp-card reveal" style="padding: 30px 26px; background: linear-gradient(160deg, #221E1C 0%, #19100F 100%); border: 1px solid rgba(232,203,160,.22); border-radius: 14px">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#E8CBA0" stroke-width="1.4" stroke-linecap="round" aria-hidden="true" style="margin-bottom: 18px">
+              <path d="M8 11v8"/><path d="M13 7v16"/><path d="M18 10v10"/><path d="M23 13v4"/>
+            </svg>
+            <h3 style="margin: 0 0 10px; font-size: 18px; color: #FFFFFF; font-weight: 600">Tu voz</h3>
+            <p style="margin: 0; font-size: 15px; color: #D5CDC3">Cómo hablas, qué palabras son tuyas y cuáles estabas usando prestadas.</p>
+          </div>
+
+          <div class="mp-card reveal" style="padding: 30px 26px; background: linear-gradient(160deg, #221E1C 0%, #19100F 100%); border: 1px solid rgba(232,203,160,.22); border-radius: 14px">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#E8CBA0" stroke-width="1.4" aria-hidden="true" style="margin-bottom: 18px">
+              <circle cx="11" cy="15" r="7"/><circle cx="19" cy="15" r="7"/>
+            </svg>
+            <h3 style="margin: 0 0 10px; font-size: 18px; color: #FFFFFF; font-weight: 600">Tu forma de conectar</h3>
+            <p style="margin: 0; font-size: 15px; color: #D5CDC3">Cómo entras en vínculo con tu clienta y por qué te recuerda a ti.</p>
+          </div>
+
+          <div class="mp-card reveal" style="padding: 30px 26px; background: linear-gradient(160deg, #221E1C 0%, #19100F 100%); border: 1px solid rgba(232,203,160,.22); border-radius: 14px">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#E8CBA0" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-bottom: 18px">
+              <path d="M5 22l10-14 10 14"/><path d="M5 22h20"/>
+            </svg>
+            <h3 style="margin: 0 0 10px; font-size: 18px; color: #FFFFFF; font-weight: 600">Tu forma de liderar</h3>
+            <p style="margin: 0; font-size: 15px; color: #D5CDC3">Desde dónde tienes autoridad de verdad, sin forzar un papel que no es tuyo.</p>
+          </div>
+
+          <div class="mp-card reveal" style="padding: 30px 26px; background: linear-gradient(135deg, #4A1220 0%, #1C1917 100%); border: 1px solid rgba(232,203,160,0.32); border-radius: 14px">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#FFF2DC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-bottom: 18px">
+              <rect x="4" y="7" width="22" height="16" rx="3"/><circle cx="15" cy="15" r="4"/>
+            </svg>
+            <h3 style="margin: 0 0 10px; font-size: 18px; color: #FFFFFF; font-weight: 600">Tu forma de mostrarte</h3>
+            <p style="margin: 0; font-size: 15px; color: #D8D0C7">Cómo apareces en redes y en cámara sin que te cueste cada vez.</p>
+          </div>
+
+        </div>
+
+        <p class="reveal" style="margin: 32px 0 0; max-width: 760px; font-size: 19px; color: #DFD8CE">
+          Esas cuatro cosas son las que hacen que te elijan a ti. Y ninguna se puede construir sobre una identidad que todavía no sabes nombrar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ ENTREGABLES · PLEGABLES ══════════ -->
+  <section style="padding: 104px 24px; background: rgba(10,10,10,.68)">
+    <div style="max-width: 920px; margin: 0 auto">
+      <div style="display: flex; flex-wrap: wrap; gap: 52px; align-items: center; margin-bottom: 56px">
+        <div style="flex: 999 1 400px; min-width: 0">
+          <h2 class="reveal" style="margin: 0 0 26px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: clamp(32px, 4.8vw, 54px); line-height: 1.04; letter-spacing: -.015em; color: #FFFFFF; font-weight: 600">
+            Todo lo que te llevas
+          </h2>
+          <p class="reveal" style="margin: 0 0 20px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: clamp(22px, 3vw, 32px); line-height: 1.3; color: #F0DFC2; font-weight: 600">
+            Te vas con tu 2027 escrito: quién eres, qué vendes, a quién, con qué palabras, qué publicas cada semana y cómo te muestras.
+          </p>
+          <p class="reveal" style="margin: 0; font-size: 16px; color: #C4BCB2">Y aquí está pieza por pieza. Ábrelos.</p>
+        </div>
+        <div class="reveal" style="flex: 1 1 340px; min-width: 0; max-width: 470px; margin: 0 auto">
+          <div style="position: relative">
+            <div aria-hidden="true" style="position: absolute; inset: -30px; border-radius: 50%; background: radial-gradient(circle, rgba(232,203,160,.2) 0%, rgba(232,203,160,0) 70%); filter: blur(14px)"></div>
+            <img src="assets/mockup.jpg" alt="Carpeta con lámina dorada, mapa enrollado con cordón y perlas" width="1100" height="739" style="position: relative; display: block; width: 100%; height: auto; border-radius: 14px; border: 1px solid rgba(232,203,160,.3); box-shadow: 0 30px 80px rgba(0,0,0,.6)">
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 14px">
+
+        <details class="mp-fold reveal" open>
+          <summary>
+            <span style="font-size: 13px; letter-spacing: 0.28em; text-transform: uppercase; color: #F0DFC2; font-weight: 600">Dirección</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8CBA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="mp-foldbody">
+            <ul style="margin: 0; padding-left: 20px; font-size: 16px; color: #D5CDC3; line-height: 1.95">
+              <li>Tu Diagnóstico de Identidad completo</li>
+              <li>Tu estrategia 2027 definida</li>
+              <li>Tu posicionamiento en una frase</li>
+              <li>Tu diferencial nombrado</li>
+              <li>Tu plan de ejecución 2027</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="mp-fold reveal">
+          <summary>
+            <span style="font-size: 13px; letter-spacing: 0.28em; text-transform: uppercase; color: #F0DFC2; font-weight: 600">Contenido</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8CBA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="mp-foldbody">
+            <ul style="margin: 0; padding-left: 20px; font-size: 16px; color: #D5CDC3; line-height: 1.95">
+              <li>Sistema infinito de ideas</li>
+              <li>Tus ángulos y tus pilares</li>
+              <li>Tu calendario de contenido 2027</li>
+              <li>Guiones y ganchos desde tu síntoma</li>
+              <li>Plantillas de calendario, ángulos y pilares</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="mp-fold reveal">
+          <summary>
+            <span style="font-size: 13px; letter-spacing: 0.28em; text-transform: uppercase; color: #F0DFC2; font-weight: 600">Imagen y presencia</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8CBA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="mp-foldbody">
+            <ul style="margin: 0; padding-left: 20px; font-size: 16px; color: #D5CDC3; line-height: 1.95">
+              <li>Estilo visual alineado a tu diferencial</li>
+              <li>Avatares y fotos profesionales con IA</li>
+              <li>Revisión de tu perfil y tu bio</li>
+              <li>Tácticas de edición, luz, cámara y vestuario</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="mp-fold reveal" style="background: linear-gradient(135deg, #4A1220 0%, #1C1917 100%); border-color: rgba(232,203,160,.32)">
+          <summary>
+            <span style="font-size: 13px; letter-spacing: 0.28em; text-transform: uppercase; color: #F0DFC2; font-weight: 600">Acompañamiento</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFF2DC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="mp-foldbody">
+            <ul style="margin: 0; padding-left: 20px; font-size: 16px; color: #D8D0C7; line-height: 1.95">
+              <li>3 llamadas en vivo, una por semana</li>
+              <li>Chat de empuje durante los 21 días</li>
+              <li>Bienvenida personal y formulario de inicio</li>
+              <li>Mapa visible de tu progreso</li>
+              <li>Cierre el día 21 con tu siguiente paso</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ TESTIMONIOS ══════════ -->
+  <section style="padding: 104px 24px; background: rgba(10,10,10,.68)">
+    <div style="max-width: 1080px; margin: 0 auto">
+      <p class="reveal mp-rule" style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: #F0DFC2; font-weight: 600">Resultados de acompañamientos 1:1</p>
+      <h2 class="reveal" style="margin: 0 0 16px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: clamp(32px, 4.8vw, 54px); line-height: 1.04; letter-spacing: -.015em; color: #FFFFFF; font-weight: 600">
+        Esto pasa cuando cambias tu posicionamiento
+      </h2>
+      <p class="reveal" style="margin: 0 0 44px; max-width: 720px; font-size: 17px; color: #C4BCB2">
+        Resultados de clientas de mi acompañamiento 1:1. Mapa 2027 trabaja esa misma base de identidad, en grupo y en 21 días.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; align-items: start">
+        <article class="mp-card reveal" style="display: flex; flex-direction: column; gap: 22px; padding: 36px 34px; background: linear-gradient(160deg, #221E1C 0%, #19100F 100%); border: 1px solid rgba(232,203,160,.22); border-radius: 14px">
+          <p style="margin: 0; font-weight: 500; font-size: clamp(17px, 1.9vw, 19.5px); line-height: 1.55; color: #F5F1E8">«Los primeros 30 días hice lo que antes hacía en 4 meses. Después del programa, dupliqué mi facturación.»</p>
+          <div>
+            <p class="mp-gold" style="margin: 0 0 6px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-weight: 600; font-size: 46px; line-height: 1">4x</p>
+            <p style="margin: 0; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: #C4BCB2; line-height: 1.5">Facturación cuadriplicada en los primeros 30 días</p>
+          </div>
+          <div style="padding-top: 18px; border-top: 1px solid rgba(232,203,160,.18)">
+            <p style="margin: 0 0 3px; font-size: 15px; font-weight: 600; color: #F5F1E8">Ann Rolon</p>
+            <p style="margin: 0; font-size: 14px; color: #C4BCB2">Fundadora de Estudio Mueble™ · #1 en mueblería de lujo en Puerto Rico</p>
+          </div>
+          <div>
+            <p style="margin: 0 0 10px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #ABA299">Testimonio en video</p>
+            <a class="mp-play" href="https://www.youtube.com/watch?v=2myfEU2amU0" target="_blank" rel="noopener" style="display: block; position: relative; border-radius: 10px; overflow: hidden; border: 1px solid rgba(232,203,160,.26)">
+              <img src="assets/yt-ann.jpg" alt="Testimonio en video de Ann Rolon" loading="lazy" width="720" height="405" style="display: block; width: 100%; height: auto">
+              <span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,10,.1) 0%, rgba(10,10,10,.55) 100%)"></span>
+              <span class="mp-playbtn" aria-hidden="true" style="position: absolute; left: 50%; top: 50%; margin: -27px 0 0 -27px; width: 54px; height: 54px; border-radius: 50%; background: #E8CBA0; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,.5)">
+                <svg width="16" height="18" viewBox="0 0 13 15"><path d="M0 0v15l13-7.5L0 0Z" fill="#19100F"/></svg>
+              </span>
+            </a>
+          </div>
+        </article>
+        <article class="mp-card reveal" style="display: flex; flex-direction: column; gap: 22px; padding: 36px 34px; background: linear-gradient(160deg, #221E1C 0%, #19100F 100%); border: 1px solid rgba(232,203,160,.22); border-radius: 14px">
+          <p style="margin: 0; font-weight: 500; font-size: clamp(17px, 1.9vw, 19.5px); line-height: 1.55; color: #F5F1E8">«El retiro que estoy haciendo en Argentina, ya llevo 6 personas inscriptas esta semana.»</p>
+          <div>
+            <p class="mp-gold" style="margin: 0 0 6px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-weight: 600; font-size: 46px; line-height: 1">$3.000</p>
+            <p style="margin: 0; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: #C4BCB2; line-height: 1.5">En su primer mes — y de 3.316 a 8.094 seguidores en 30 días, sin anuncios</p>
+          </div>
+          <div style="padding-top: 18px; border-top: 1px solid rgba(232,203,160,.18)">
+            <p style="margin: 0 0 3px; font-size: 15px; font-weight: 600; color: #F5F1E8">Nair</p>
+            <p style="margin: 0; font-size: 14px; color: #C4BCB2">Mentora y fundadora de Retiros Mágicos</p>
+          </div>
+          <div>
+            <p style="margin: 0 0 10px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #ABA299">Captura sin editar · toca para ampliar</p>
+            <div style="display: flex; gap: 10px">
+            <a class="mp-proof" href="assets/proof-nair.jpg" target="_blank" rel="noopener" style="flex: 1 1 0; min-width: 0; display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(232,203,160,.22)">
+              <img src="assets/proof-nair.jpg" alt="Resultado de Nair: 3.000 USD en su primer mes" loading="lazy" style="display: block; width: 100%; height: 136px; object-fit: cover; object-position: top">
+            </a>
+            </div>
+          </div>
+        </article>
+        <article class="mp-card reveal" style="display: flex; flex-direction: column; gap: 22px; padding: 36px 34px; background: linear-gradient(160deg, #221E1C 0%, #19100F 100%); border: 1px solid rgba(232,203,160,.22); border-radius: 14px">
+          <p style="margin: 0; font-weight: 500; font-size: clamp(17px, 1.9vw, 19.5px); line-height: 1.55; color: #F5F1E8">«He hecho otros programas y mentorías, y a veces me sentí una clienta más haciendo las mismas plantillas que los demás. Aquí no.»</p>
+          <div>
+            <p class="mp-gold" style="margin: 0 0 6px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-weight: 600; font-size: 30px; line-height: 1">Nada de plantillas</p>
+            <p style="margin: 0; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: #C4BCB2; line-height: 1.5">Tras 2 sesiones de coaching 1:1</p>
+          </div>
+          <div style="padding-top: 18px; border-top: 1px solid rgba(232,203,160,.18)">
+            <p style="margin: 0 0 3px; font-size: 15px; font-weight: 600; color: #F5F1E8">Psicóloga espiritual</p>
+            <p style="margin: 0; font-size: 14px; color: #C4BCB2">Clienta de Quantum Branding PRO™</p>
+          </div>
+          <div>
+            <p style="margin: 0 0 10px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #ABA299">Captura sin editar · toca para ampliar</p>
+            <div style="display: flex; gap: 10px">
+            <a class="mp-proof" href="assets/proof-almas.jpg" target="_blank" rel="noopener" style="flex: 1 1 0; min-width: 0; display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(232,203,160,.22)">
+              <img src="assets/proof-almas.jpg" alt="Mensaje de clienta sobre el coaching 1:1" loading="lazy" style="display: block; width: 100%; height: 136px; object-fit: cover; object-position: top">
+            </a>
+            </div>
+          </div>
+        </article>
+        <article class="mp-card reveal" style="display: flex; flex-direction: column; gap: 22px; padding: 36px 34px; background: linear-gradient(160deg, #221E1C 0%, #19100F 100%); border: 1px solid rgba(232,203,160,.22); border-radius: 14px">
+          <p style="margin: 0; font-weight: 500; font-size: clamp(17px, 1.9vw, 19.5px); line-height: 1.55; color: #F5F1E8">«Estoy con la agenda reventando. Espacio en agenda ya no hay.»</p>
+          <div>
+            <p class="mp-gold" style="margin: 0 0 6px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-weight: 600; font-size: 30px; line-height: 1">Agenda llena</p>
+            <p style="margin: 0; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: #C4BCB2; line-height: 1.5">Sin campañas ni publicidad pagada</p>
+          </div>
+          <div style="padding-top: 18px; border-top: 1px solid rgba(232,203,160,.18)">
+            <p style="margin: 0 0 3px; font-size: 15px; font-weight: 600; color: #F5F1E8">Médico especialista</p>
+            <p style="margin: 0; font-size: 14px; color: #C4BCB2">Mensaje real</p>
+          </div>
+          <div>
+            <p style="margin: 0 0 10px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #ABA299">Audio original · sin editar</p>
+            <video src="assets/medico.mp4" controls preload="metadata" playsinline style="display: block; width: 100%; max-height: 300px; border-radius: 8px; border: 1px solid rgba(232,203,160,.22); background: rgba(10,10,10,.68)"></video>
+            <div style="display: flex; gap: 10px; margin-top: 10px">
+            <a class="mp-proof" href="assets/proof-clienta.jpg" target="_blank" rel="noopener" style="flex: 1 1 0; min-width: 0; display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(232,203,160,.22)">
+              <img src="assets/proof-clienta.jpg" alt="Mensajes reales de clientas de Quantum Branding" loading="lazy" style="display: block; width: 100%; height: 110px; object-fit: cover; object-position: top">
+            </a>
+            </div>
+          </div>
+        </article>
+        <article class="mp-card reveal" style="display: flex; flex-direction: column; gap: 22px; padding: 36px 34px; background: linear-gradient(160deg, #221E1C 0%, #19100F 100%); border: 1px solid rgba(232,203,160,.22); border-radius: 14px">
+          <p style="margin: 0; font-weight: 500; font-size: clamp(17px, 1.9vw, 19.5px); line-height: 1.55; color: #F5F1E8">«La inauguración fue todo un éxito. Gracias por tu asesoramiento oportuno — tus recomendaciones de liderazgo fueron muy valiosas para nosotras.»</p>
+          <div>
+            <p class="mp-gold" style="margin: 0 0 6px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-weight: 600; font-size: 30px; line-height: 1">Nueva línea</p>
+            <p style="margin: 0; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: #C4BCB2; line-height: 1.5">Distribuidora en expansión hacia exportación</p>
+          </div>
+          <div style="padding-top: 18px; border-top: 1px solid rgba(232,203,160,.18)">
+            <p style="margin: 0 0 3px; font-size: 15px; font-weight: 600; color: #F5F1E8">Breny Ugarte</p>
+            <p style="margin: 0; font-size: 14px; color: #C4BCB2">Fundadora de distribuidora de alimentos</p>
+          </div>
+          <div>
+            <p style="margin: 0 0 10px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #ABA299">Captura sin editar · toca para ampliar</p>
+            <div style="display: flex; gap: 10px">
+            <a class="mp-proof" href="assets/proof-breny.jpg" target="_blank" rel="noopener" style="flex: 1 1 0; min-width: 0; display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(232,203,160,.22)">
+              <img src="assets/proof-breny.jpg" alt="Inauguración y mensajes de Breny Ugarte" loading="lazy" style="display: block; width: 100%; height: 136px; object-fit: cover; object-position: top">
+            </a>
+            <a class="mp-proof" href="assets/test-breny-2.jpg" target="_blank" rel="noopener" style="flex: 1 1 0; min-width: 0; display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(232,203,160,.22)">
+              <img src="assets/test-breny-2.jpg" alt="Mensaje de Breny Ugarte sobre el taller" loading="lazy" style="display: block; width: 100%; height: 136px; object-fit: cover; object-position: top">
+            </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PARA QUIÉN ══════════ -->
+  <section style="padding: 104px 24px; background: linear-gradient(180deg, rgba(10,10,10,.68) 0%, rgba(58,16,24,.6) 100%)">
+    <div style="max-width: 1000px; margin: 0 auto">
+      <h2 class="reveal" style="margin: 0 0 44px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: clamp(32px, 4.8vw, 54px); line-height: 1.04; letter-spacing: -.015em; color: #FFFFFF; font-weight: 600">
+        Antes de agendar, léete esto
+      </h2>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 18px">
+        <div class="mp-card reveal" style="flex: 999 1 380px; min-width: 0; padding: 38px; background: rgba(232,203,160,0.09); border-radius: 14px; border: 1px solid rgba(232,203,160,0.3)">
+          <h3 style="margin: 0 0 20px; font-size: 20px; color: #F0DFC2; font-weight: 600">Entra si…</h3>
+          <ul style="margin: 0; padding-left: 20px; font-size: 17px; color: #D8D0C7; line-height: 1.95">
+            <li>Ya tienes resultados o un saber real que vender</li>
+            <li>Sientes que tu trabajo es excelente pero no se ve</li>
+            <li>No sabes nombrar qué te hace diferente</li>
+            <li>Empiezas muchas cosas y no cierras ninguna</li>
+            <li>No sabes qué publicar ni cómo hablar de lo que haces</li>
+          </ul>
+        </div>
+
+        <div class="mp-card reveal" style="flex: 999 1 380px; min-width: 0; padding: 38px; background: rgba(245,241,232,0.04); border-radius: 14px; border: 1px solid rgba(245,241,232,0.12)">
+          <h3 style="margin: 0 0 20px; font-size: 20px; color: #F5F1E8; font-weight: 600">No es para ti si…</h3>
+          <ul style="margin: 0; padding-left: 20px; font-size: 17px; color: #D5CDC3; line-height: 1.95">
+            <li>Buscas que te hagan todo sin trabajar tu propio mapa</li>
+            <li>Quieres un resultado de dinero garantizado</li>
+            <li>No puedes sostener 21 días de trabajo con tareas cortas entre llamadas</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="reveal" style="margin: 34px 0 0; font-size: 17px; color: #C4BCB2">
+        Mapa 2027 no promete resultados de dinero. Promete dirección, claridad y un plan que puedes ejecutar.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════ POR QUÉ AHORA ══════════ -->
+  <section style="position: relative; padding: 124px 24px; background: rgba(58,16,24,.6); overflow: hidden">
+    <div aria-hidden="true" style="position: absolute; inset: 0; background-image: url(assets/perlas.jpg); background-size: cover; background-position: center; opacity: .34"></div>
+    <div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(85% 70% at 50% 50%, rgba(10,10,10,.86) 0%, rgba(10,10,10,.6) 48%, rgba(26,7,12,.72) 100%)"></div>
+    <div style="position: relative; max-width: 760px; margin: 0 auto; text-align: center">
+      <p class="reveal mp-rule" style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: #F0DFC2; font-weight: 600">Por qué diciembre</p>
+      <h2 class="reveal" style="margin: 0 0 24px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: clamp(30px, 4.6vw, 48px); line-height: 1.06; letter-spacing: -.015em; color: #FFFFFF; font-weight: 600">
+        Es el único mes en que ya estás pensando en el año que viene
+      </h2>
+      <p class="reveal" style="margin: 0; font-size: 19px; color: #DFD8CE">
+        Después ya es tarde: enero te agarra haciendo lo mismo. Si no entras ahora, entras a 2027 igual que entraste a 2026 — sabiendo más que tu competencia, y siendo elegida menos.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════ ANA ══════════ -->
+  <section style="position: relative; padding: 112px 24px; background: rgba(23,20,26,.68); overflow: hidden">
+    <div style="position: relative; max-width: 1060px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 64px; align-items: center">
+
+      <!-- retrato -->
+      <div class="reveal" style="flex: 1 1 320px; min-width: 0; max-width: 420px; margin: 0 auto">
+        <div style="position: relative">
+          <div aria-hidden="true" style="position: absolute; inset: 22px -22px -22px 22px; border: 1px solid rgba(232,203,160,.42); border-radius: 4px"></div>
+          <div aria-hidden="true" style="position: absolute; inset: -28px; border-radius: 50%; background: radial-gradient(circle, rgba(232,203,160,.16) 0%, rgba(232,203,160,0) 68%); filter: blur(10px)"></div>
+          <img src="assets/ana.jpg" alt="Retrato de Ana Sepúlveda" width="900" height="1200" style="position: relative; display: block; width: 100%; height: auto; border-radius: 4px; filter: sepia(.1) saturate(.96) contrast(1.02)">
+        </div>
+      </div>
+
+      <!-- texto -->
+      <div style="flex: 999 1 400px; min-width: 0">
+        <p class="reveal mp-rule" style="margin: 0 0 14px; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: #F0DFC2; font-weight: 600">Quién te acompaña</p>
+        <h2 class="reveal" style="margin: 0 0 8px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: clamp(34px, 5vw, 56px); line-height: 1; letter-spacing: -.02em; color: #FFFFFF; font-weight: 600">
+          Ana Sepúlveda
+        </h2>
+        <p class="reveal" style="margin: 0 0 28px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #C4BCB2; font-weight: 500">
+          Estratega de identidad de marca
+        </p>
+
+        <p class="reveal" style="margin: 0 0 18px; font-size: 18px; color: #DFD8CE">
+          Creé Quantum Branding, el método con el que trabajo el posicionamiento de profesionales que tienen autoridad real y un mercado que no se la reconoce.
+        </p>
+        <p class="reveal" style="margin: 0 0 18px; font-size: 18px; color: #DFD8CE">
+          Mi técnica para encontrar tu norte y tu diferencial ha ayudado a cientos de personas. No soy coach de dinero ni guía espiritual: soy arquitecta de identidad.
+        </p>
+        <p class="reveal" style="margin: 0; font-size: 18px; color: #FFFFFF">
+          Mapa 2027 es el único programa grupal que hago en el año, y lo hago solo para mujeres.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════ CTA FINAL ══════════ -->
+  <section style="position: relative; padding: 124px 24px; overflow: hidden; background: radial-gradient(135% 115% at 50% 100%, #5E1526 0%, #370D18 30%, #1A070C 60%, #0A0A0A 88%)">
+
+    <svg viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none">
+      <g class="mp-graticule" stroke="#E8CBA0" stroke-width="0.8" style="animation: none; opacity: .05">
+        <line x1="0" y1="160" x2="1440" y2="160"/><line x1="0" y1="340" x2="1440" y2="340"/><line x1="0" y1="520" x2="1440" y2="520"/>
+        <line x1="240" y1="0" x2="240" y2="700"/><line x1="600" y1="0" x2="600" y2="700"/><line x1="960" y1="0" x2="960" y2="700"/><line x1="1320" y1="0" x2="1320" y2="700"/>
+      </g>
+      <g class="mp-stars" fill="#FFF2DC">
+        <circle cx="180" cy="120" r="1.5" style="animation-delay:.4s"/><circle cx="420" cy="230" r="1.2" style="animation-delay:1.9s"/>
+        <circle cx="1120" cy="150" r="1.6" style="animation-delay:1.1s"/><circle cx="1300" cy="300" r="1.3" style="animation-delay:2.8s"/>
+        <circle cx="90" cy="420" r="1.2" style="animation-delay:3.3s"/><circle cx="1380" cy="560" r="1.4" style="animation-delay:.7s"/>
+      </g>
+    </svg>
+
+    <div style="position: relative; max-width: 760px; margin: 0 auto; text-align: center">
+
+      <p class="reveal" style="margin: 0 0 26px; display: inline-block; padding: 9px 20px; border: 1px solid rgba(232,203,160,0.5); border-radius: 100px; font-size: 14px; color: #E8CBA0; font-weight: 600; letter-spacing: 0.04em; background: rgba(11,10,9,0.45)">
+        Inscripción hasta el 30 de noviembre
+      </p>
+
+      <h2 class="reveal" style="margin: 0 0 24px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: clamp(34px, 5.4vw, 60px); line-height: 1.04; color: #FFFFFF; font-weight: 600">
+        Agenda tu llamada<br>de 15 minutos
+      </h2>
+      <p class="reveal" style="margin: 0 auto 40px; max-width: 580px; font-size: 18px; color: #DFD8CE">
+        Hablamos de dónde estás hoy y de qué quieres que sea verdad en 2027. Te cuento todos los detalles y la inversión. Si Mapa no es para ti, te lo digo ahí mismo.
+      </p>
+
+      <a class="mp-cta" href="https://calendar.app.google/jey97usAEXV5FyUv7" target="_blank" rel="noopener" style="display: inline-block; padding: 21px 50px; min-height: 44px; background: #E8CBA0; color: #2A1206; border-radius: 6px; font-size: 17px; font-weight: 700; text-decoration: none">
+        <span class="sheen"></span>Agendar mi llamada<span class="mp-arrow">&#8594;</span>
+      </a>
+
+      <p class="reveal" style="margin: 24px 0 0; font-size: 15px; color: #C4BCB2">
+        Cuando se llenan los lugares, se cierra. El próximo grupal es el año que viene.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ · PLEGABLE ══════════ -->
+  <section style="padding: 96px 24px; background: rgba(10,10,10,.68)">
+    <div style="max-width: 820px; margin: 0 auto">
+      <h2 class="reveal" style="margin: 0 0 40px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: clamp(26px, 3.8vw, 40px); line-height: 1.12; color: #FFFFFF; font-weight: 600">
+        Preguntas que me hacen siempre
+      </h2>
+
+      <div style="display: flex; flex-direction: column; gap: 12px">
+
+        <details class="mp-fold reveal">
+          <summary><span style="font-size: 19.5px; color: #FFFFFF; font-weight: 600">¿Cuánto cuesta?</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8CBA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="mp-foldbody"><p style="margin: 0; font-size: 17.5px; line-height: 1.6; color: #DED6CC">Te doy el precio y las formas de pago en la llamada, junto con todo lo demás. Hay opción de pago en dos cuotas.</p></div>
+        </details>
+
+        <details class="mp-fold reveal">
+          <summary><span style="font-size: 19.5px; color: #FFFFFF; font-weight: 600">¿Y si no puedo estar en vivo en una llamada?</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8CBA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="mp-foldbody"><p style="margin: 0; font-size: 17.5px; line-height: 1.6; color: #DED6CC">Las llamadas quedan grabadas y el chat sigue abierto los 21 días. Pero si no puedes sostener el ritmo de tareas entre llamadas, mejor no entres ahora.</p></div>
+        </details>
+
+        <details class="mp-fold reveal">
+          <summary><span style="font-size: 19.5px; color: #FFFFFF; font-weight: 600">¿Es lo mismo que la Auditoría de Marca?</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8CBA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="mp-foldbody"><p style="margin: 0; font-size: 17.5px; line-height: 1.6; color: #DED6CC">No. La Auditoría es una entrega individual con una llamada. Mapa son 21 días de trabajo acompañado, del 1 al 21 de diciembre, donde armas tu sistema completo y te llevas tu calendario del año.</p></div>
+        </details>
+
+        <details class="mp-fold reveal">
+          <summary><span style="font-size: 19.5px; color: #FFFFFF; font-weight: 600">¿Necesito tener un negocio andando?</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8CBA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="mp-foldbody"><p style="margin: 0; font-size: 17.5px; line-height: 1.6; color: #DED6CC">No necesariamente. Necesitas tener un saber real que vender. Si estás por empezar, es el mejor momento: arrancas con dirección en vez de probando.</p></div>
+        </details>
+
+        <details class="mp-fold reveal">
+          <summary><span style="font-size: 19.5px; color: #FFFFFF; font-weight: 600">¿Desde qué países puedo participar?</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8CBA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="mp-foldbody"><p style="margin: 0; font-size: 17.5px; line-height: 1.6; color: #DED6CC">Desde cualquier país de habla hispana. Las llamadas son en línea y las grabaciones quedan disponibles.</p></div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PIE ══════════ -->
+  <footer style="position: relative; padding: 56px 24px; background: rgba(7,6,5,.8); text-align: center; overflow: hidden">
+    <svg viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; opacity: .5">
+      <path d="M-40 120 C 260 96, 420 60, 720 62 C 1020 64, 1180 100, 1480 72" fill="none" stroke="#E8CBA0" stroke-width="1" opacity="0.2"/>
+      <path d="M-40 142 C 280 120, 440 86, 720 88 C 1000 90, 1200 124, 1480 98" fill="none" stroke="#E8CBA0" stroke-width="1" opacity="0.12"/>
+    </svg>
+    <div style="position: relative">
+      <p class="mp-gold" style="margin: 0 0 8px; font-family: 'Bodoni Moda', Didot, Georgia, serif; font-size: 22px">Mapa 2027</p>
+      <p style="margin: 0 0 6px; font-size: 14px; color: #C4BCB2">Quantum Branding · Ana Sepúlveda</p>
+      <p style="margin: 0; font-size: 14px; color: #C4BCB2">1 al 21 de diciembre de 2026 · Inscripción hasta el 30 de noviembre</p>
+    </div>
+  </footer>
+
+  </div>
+</div>
+<script>
+(function () {
+  var gate = document.getElementById('gate');
+  var btn = document.getElementById('btn-abrir');
+  if (!gate || !btn) return;
+  document.documentElement.style.overflow = 'hidden';
+  btn.addEventListener('click', function () {
+    gate.className = 'mp-gate mp-gate-out';
+    setTimeout(function () {
+      if (gate.parentNode) gate.parentNode.removeChild(gate);
+      document.documentElement.style.overflow = '';
+      window.scrollTo(0, 0);
+    }, 600);
+  });
+})();
+</script>
+</body>
+</html>

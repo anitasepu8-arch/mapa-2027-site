@@ -1,0 +1,32 @@
+MAPA 2027 — Página de ventas
+Ana Sepúlveda · Quantum Branding
+
+QUÉ HAY AQUÍ
+  index.html   la página completa
+  assets/      imágenes, la miniatura del testimonio y el audio del médico
+
+CÓMO SUBIRLA A VERCEL
+  1. Entra a vercel.com → "Add New…" → "Project"
+  2. Elige desplegar sin repositorio y arrastra ESTA CARPETA ENTERA
+  3. Se publica tal cual: no usa framework, ni build, ni variables de entorno
+
+  Para tu dominio de iprosper28: sube index.html y la carpeta assets/
+  por FTP o por el panel del hosting, manteniendo la estructura.
+  index.html y assets/ tienen que quedar en la misma carpeta.
+
+QUÉ LLEVA INCRUSTADO
+  · Tu agenda de Google ("15 min con Ana - Mapa 2027"), en el cierre.
+    La clienta elige día y hora sin salir de la página.
+
+QUÉ ABRE EN PESTAÑA NUEVA
+  · El testimonio en video de Ann Rolon (miniatura con botón de play)
+  · Las capturas de los mensajes de clientas
+
+SI CAMBIA ALGO
+  El enlace de la agenda está en index.html dentro de una etiqueta
+  <iframe>. Búscalo con cualquier editor de texto por "calendar.google.com".
+
+PENDIENTE EN GOOGLE CALENDAR
+  Las 7 preguntas del formulario se configuran en la cita:
+  Formulario de reserva → Añadir elemento.
+  Nombre y correo ya vienen puestos por defecto, no los repitas.
